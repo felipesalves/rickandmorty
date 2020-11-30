@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">rickMortyIesbExercicio</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Nome:</string>
+    <string name="gender">Gênero:</string>
+    <string name="status">Status:</string>
+    <string name="specie">Espécie:</string>
+    <string name="type">Tipo:</string>
+    <string name="origen">Origem:</string>
+    <string name="location">Locação:</string>
+    <string name="created">Criado:</string>
+</resources>

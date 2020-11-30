@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="br.com.iesb.felipe.rickmortyiesbexercicio.view.fragment.DetalheFragment" />
+
+        <variable
+            name="viewModel"
+            type="br.com.iesb.felipe.rickmortyiesbexercicio.viewmodel.RickAndMortyViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/flDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.DetalheFragment">
+
+
+    <TextView
+        android:id="@+id/tvNameDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.name }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/gender"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/status"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenero" />
+
+
+    <TextView
+        android:id="@+id/tvEspecie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/specie"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEspecie" />
+
+    <TextView
+        android:id="@+id/tvOrigem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/origen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
+
+    <TextView
+        android:id="@+id/tvLocacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrigem" />
+
+    <TextView
+        android:id="@+id/tvCriado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/created"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocacao" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvGeneroDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        android:text="@{ viewModel.perseonagemDetail.gender }"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGenero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNameDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvGenero" />
+
+    <TextView
+        android:id="@+id/tvStatusDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.status }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvGeneroDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvStatus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvEspecieDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.species }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEspecie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvStatusDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvEspecie"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/tvTipoDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.type }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvEspecieDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvTipo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/tvOrigemDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.origin.name }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOrigem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvTipoDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvOrigem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/tvLocacaoDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.location.name }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLocacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvOrigemDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvLocacao" />
+
+    <TextView
+        android:id="@+id/tvCriadoDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@{ viewModel.perseonagemDetail.created }"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCriado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvLocacaoDesc"
+        app:layout_constraintTop_toTopOf="@+id/tvCriado" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
